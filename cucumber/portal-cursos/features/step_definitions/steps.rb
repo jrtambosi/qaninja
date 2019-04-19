@@ -1,7 +1,13 @@
 Quando("eu faço uma busca pelo termo {string}") do |termo|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+    visit 'https://portal.qaninja.io/cursos'
+    find("#searchtext").set termo
+    find('#btn_form_search').click
+
+
+
+end
   
   Então("devo ver a seguinte notificação {string}") do |notificacao|
-    pending # Write code here that turns the phrase above into concrete actions
+    
+    expect(page).to have_text notificacao
   end
