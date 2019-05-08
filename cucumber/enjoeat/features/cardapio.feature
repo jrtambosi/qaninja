@@ -9,7 +9,7 @@ Funcionalidade: Cardapio
     Cenario: Produto
 
         Dado que acesso a lista de restaurante
-        Quando eu acesso um restaurante "Burger House"
+        Quando eu escolho o restaurante "Burger House"
         Entao vejo os seguintes itens disponiveis no cardapio:
              | produto        | descricao                       | preco    | 
              | Classic Burger | O clássico. Não tem como errar. | R$ 18,50 | 
