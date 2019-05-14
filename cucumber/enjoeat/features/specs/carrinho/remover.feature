@@ -1,12 +1,10 @@
-#Language: Pt
-
+#language: pt
+@bread_bakery
 Funcionalidade: remover do carrinho
-
-   Para que eu possa manter meu carrinho com itens desejados
+ Para que eu possa manter meu carrinho com itens desejados
 
 
    Cenario: Remover 1 item
-
         Dado que tenho itens os seguintes itens no carrinho
             |nome                  |preco   |
             |Cup Cake              |R$ 8,70 |
@@ -17,7 +15,6 @@ Funcionalidade: remover do carrinho
 
 
     Cenario: Remover todos os itens
-
         Dado que eu tenho o seguintes itens no carrinho
             |nome                  |preco   |
             |Cup Cake              |R$ 8,70 |
