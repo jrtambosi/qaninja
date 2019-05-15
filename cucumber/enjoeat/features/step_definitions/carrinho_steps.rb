@@ -18,6 +18,11 @@ Dado("que  o produto desejado é {string}") do |produto|
     
   end
   
-  Entao("o valor total deve ser de {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Entao("o valor total deve ser de {string}") do |valor_total|
+    cart = find('#shopping-cart')
+    total = cart.find("tr", text: "Total:").find("td")
+    expect(cart).to have_text valor_total
+    puts total.text
+    puts valor_total  
+
   end
