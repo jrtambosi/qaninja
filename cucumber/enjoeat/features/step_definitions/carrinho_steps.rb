@@ -28,3 +28,28 @@ Dado("que  o produto desejado é {string}") do |produto|
     puts valor_total  
 
   end
+
+
+  #listade produtos
+
+  Dado("que os produtos desejados são:") do |table|
+    @product_list = table.hashes
+    #puts @product_list
+  
+  end
+  
+  Quando("eu adiciono todos os itens") do
+    @product_list.each do |p|
+      p["quantidade"].to_i.times do
+        find(".menu-item-info-box", text: p["nome"].upcase).find(".add-to-cart").click
+      end
+    end
+  end
+  
+  Entao("vejo todos os itens no carrinho") do
+    cart = find("#shopping-cart")
+    quantidade = 1
+    @product_list.each do |p|
+      expect(cart).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
+    end
+  end
