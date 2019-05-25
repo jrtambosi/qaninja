@@ -53,3 +53,21 @@ Dado("que  o produto desejado é {string}") do |produto|
       expect(cart).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
     end
   end
+
+
+  #remover itens
+
+  Dado("que tenho itens os seguintes itens no carrinho") do |table|
+    @product_list = table.hashes
+    @product_list.each do |p|
+      p["quantidade"].to_i.times do
+        find(".menu-item-info-box", text: p["nome"].upcase).find(".add-to-cart").click
+      end
+    end
+    sleep 20
+
+  end
+  
+  Quando("eu removo somente o  {int} item") do |int|
+    pending # Write code here that turns the phrase above into concrete actions
+  end

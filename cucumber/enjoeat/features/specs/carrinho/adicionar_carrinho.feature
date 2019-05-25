@@ -25,7 +25,7 @@ Funcionalidade: Adicionar carrinho
 
 
 
-     @tempo
+     
     Cenario: Adicionar varios Itens
 
         Dado que os produtos desejados são:
